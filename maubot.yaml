@@ -1,0 +1,10 @@
+maubot: 0.6.0
+id: com.github.sadparad1se.bot_stash
+version: 0.3.4
+license: GPL-3.0-only
+modules:
+  - sadparad1se_bot_stash
+main_class: StashBot
+database: true
+database_type: asyncpg
+config: false

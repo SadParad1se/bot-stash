@@ -1,0 +1,30 @@
+[project]
+name = "sadparad1se-bot-stash"
+version = "0.3.4"
+description = "A maubot plugin for stashing Matrix messages and media"
+requires-python = ">=3.10"
+license = "GPL-3.0-only"
+dependencies = [
+    "maubot==0.6.0",
+]
+
+[dependency-groups]
+dev = [
+    # mautrix 0.21 subclasses aiosqlite internals that changed in 0.22.
+    "aiosqlite>=0.16,<0.22",
+    "pytest>=8,<9",
+    "pytest-asyncio>=0.24,<2",
+    "ruff>=0.11,<1",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 99
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
